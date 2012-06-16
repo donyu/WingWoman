@@ -1,5 +1,14 @@
 <?php
-
+  $selected = $_POST['met'];
+  $choice = 0;
+  if($selected == 'bar')
+    $choice = 1;
+  elseif($selected == 'gym')
+    $choice = 2;
+  elseif($selected == 'work')
+    $choice = 3;
+  elseif($selected == 'con')
+    $choice = 4;
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +71,8 @@
       <div class="hero-unit">
         <h1>Your Perfect Date is Waiting!</h1>
         <hr color="#94D1CA">
-        <h2>What did he/she drink?</h2>
+        <?php if($choice == 1) { ?>
+              <h2>What did he/she drink?</h2>
         <br/>
         <form method="post" action="choice2.php">
           <input type="radio" name="met" value="beer" /> Beer <br/>
@@ -71,6 +81,41 @@
           <input type="radio" name="met" value="teq" /> Shot of Tequila <br/>
           <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
         </form>
+            <?php } ?>
+        <?php if($choice == 2) { ?>
+              <h2>What was his/her workout plan?</h2>
+        <br/>
+        <form method="post" action="choice2.php">
+          <input type="radio" name="met" value="beer" /> Weight lifting <br/>
+          <input type="radio" name="met" value="cos" /> Treadmill <br/>
+          <input type="radio" name="met" value="gin" /> Pilates/Yoga <br/>
+          <input type="radio" name="met" value="teq" /> Sport Activity <br/>
+          <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
+        </form>
+            <?php } ?>
+        <?php if($choice == 3) { ?>
+              <h2>What does she/he usually eat for lunch?</h2>
+        <br/>
+        <form method="post" action="choice2.php">
+          <input type="radio" name="met" value="beer" /> Homemade sandwich <br/>
+          <input type="radio" name="met" value="cos" /> Sushi <br/>
+          <input type="radio" name="met" value="gin" /> Salad <br/>
+          <input type="radio" name="met" value="teq" /> Fast Food <br/>
+          <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
+        </form>
+            <?php } ?>
+          <?php if($choice == 4) { ?>
+              <h2>What kind of music was playing?</h2>
+        <br/>
+        <form method="post" action="choice2.php">
+          <input type="radio" name="met" value="beer" /> Indie <br/>
+          <input type="radio" name="met" value="cos" /> Classical <br/>
+          <input type="radio" name="met" value="gin" /> Rock and Roll <br/>
+          <input type="radio" name="met" value="teq" /> Pop <br/>
+          <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
+        </form>
+            <?php } ?>
+        
       </div>
 
       <hr>

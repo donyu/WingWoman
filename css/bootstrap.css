@@ -737,7 +737,7 @@ input[type="reset"],
 input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
-  width: 100px;
+  width: auto;
 }
 .uneditable-textarea {
   width: auto;
