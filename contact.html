@@ -43,9 +43,9 @@
           <a class="brand" href="index.html">Date Night</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="date.html">Date</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li class="active"><a href="contact.html">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -56,12 +56,24 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Discover the Perfect Date!</h1>
-        <img src="Happy_Couple_Image.jpg" height="160" width="160" align="right">        
-        <hr color="#94D1CA">
-        <p>Simply answer these questions about you and your special someone and you can have your next date planned at the click of a button! Make the time you spend together even more special and perfectly personalized for each of your needs.</p>
-        <br>
-        <p><a class="btn btn-primary btn-large" href="date.html">Get Started &raquo;</a></p>
+        <div class="span10">
+            <h1>Questions or concerns?</h1>
+              <form action="../php/email.php" method="post">
+                <fieldset>
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="Enter your name or organization" />
+                  
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" placeholder="Enter your email address" />
+                  
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Type your message here"></textarea>
+                  <br>
+                  <input id="submit" name="submit" type="submit" value="Send message" class="btn primary large" background-color="white"/>
+                </fieldset>
+              </form>
+          </div>
+        <p>*Return messages may take up to a day to process.</p>
       </div>
 
       <hr>

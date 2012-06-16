@@ -169,7 +169,7 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 780px;
 }
 .span12 {
   width: 940px;
@@ -737,7 +737,7 @@ input[type="reset"],
 input[type="button"],
 input[type="radio"],
 input[type="checkbox"] {
-  width: auto;
+  width: 100px;
 }
 .uneditable-textarea {
   width: auto;
@@ -2121,7 +2121,7 @@ button.close {
   font-size: 14px;
   line-height: 20px;
   *line-height: 20px;
-  color: #333333;
+  color: #445668;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
@@ -4353,8 +4353,8 @@ div.subnav-fixed {
   text-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none;
-  background-color: #dddddd;
+  box-shadow: ;
+  background-color: #FFF;
   border-color: transparent;
 }
 .btn:hover,
@@ -4914,4 +4914,42 @@ blockquote small {
 }
 .invisible {
   visibility: hidden;
+}
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+    text-align:left;
+  font-size: 16px; color: #445668;
+}
+input, textarea {
+    margin-top:10px;
+  width: 440px; 
+  height: 27px;
+  background:#efefef;
+  border: 1px solid #dedede;
+  font-family: 'Cabin'; 
+  font-size: 16px; 
+  color: #3a3a3a; 
+  padding: 10px;
+  -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+textarea {
+  height:213px;
+}
+input:focus, textarea:focus {
+  border:1px solid #97d6eb;
+}
+#submit {
+  margin-top:20px;
+  text-align: center;
+  padding: 0px 0px;
+}
+#main {
+  width: 70%;
+  margin: 0px auto;
+}
+#center {
+text-align: center;
 }

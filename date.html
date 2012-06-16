@@ -43,8 +43,8 @@
           <a class="brand" href="index.html">Date Night</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="date.html">Date</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="date.html">Date</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -56,12 +56,18 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Discover the Perfect Date!</h1>
-        <img src="Happy_Couple_Image.jpg" height="160" width="160" align="right">        
+        <h1>Your Perfect Date is Waiting!</h1>
         <hr color="#94D1CA">
-        <p>Simply answer these questions about you and your special someone and you can have your next date planned at the click of a button! Make the time you spend together even more special and perfectly personalized for each of your needs.</p>
-        <br>
-        <p><a class="btn btn-primary btn-large" href="date.html">Get Started &raquo;</a></p>
+        <h2>What best describes how you met?</h2>
+        <br/>
+        <form>
+          <input type="radio" name="met" value="bar" /> Bar <br/>
+          <input type="radio" name="met" value="gym" /> Gym <br/>
+          <input type="radio" name="met" value="res" /> Restuarant <br/>
+          <input type="radio" name="met" value="school" /> School <br/>
+          <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
+        </form>
+
       </div>
 
       <hr>
