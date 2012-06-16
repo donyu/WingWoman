@@ -1,3 +1,22 @@
+<?php
+     // create a new cURL resource
+      $ch = curl_init();
+
+      // set URL and other appropriate options
+      curl_setopt($ch, CURLOPT_URL, "http://api.yipit.com/v1/deals/?key=Xyre6UJpsAe4VUwT&tag=Concert, Dance Classes, Fitness Classes, Skydiving");
+      curl_setopt($ch, CURLOPT_GET, true);
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+      // grab URL and pass it to the browser
+      $result = curl_exec($ch);
+
+      $obj = json_decode($result);
+      $sentiment = $obj->{'response'}->{'deals'};
+
+      // close cURL resource, and free up system resources
+      curl_close($ch);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,17 +75,17 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>Your Perfect Date is Waiting!</h1>
+        <h1>These date options are recommended for you and your lover!</h1>
         <hr color="#94D1CA">
-        <h2>What best describes how you met?</h2>
-        <br/>
-        <form method="post" action="choice.php">
-          <input type="radio" name="met" value="bar" /> Bar <br/>
-          <input type="radio" name="met" value="gym" /> Gym <br/>
-          <input type="radio" name="met" value="res" /> Restaurant <br/>
-          <input type="radio" name="met" value="school" /> School <br/>
-          <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
-        </form>
+            <?php foreach($sentiment as &$e){ ?>
+              <p><?=$e?></p>
+            <?php } ?>
+            <img src="http://d.cdn.yipit.com/cache/deal/5-for-two-tickets-at-dangerfields-comedy-club-40-value-2-1339870194_small_image.jpg" />
+            <a href="http://yipit.com/aff/eval/deal/?deal=YP3jNAwm&key=dZHJt2xj">$5 for Two Tickets at Dangerfield's Comedy Club! ($40 Value)</a> 
+            <br/>
+            <br/>
+            <img src="http://b.cdn.yipit.com/cache/deal/two-30-minute-on-location-music-lessons-1339851658_small_image.jpg" />
+            <a href="http://yipit.com/san-francisco/living-social/two-30-minute-on-location-music-lessons/">Two 30-Minute On-Location Music Lessons</a> 
       </div>
 
       <hr>

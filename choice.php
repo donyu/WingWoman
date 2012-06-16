@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,13 +62,13 @@
       <div class="hero-unit">
         <h1>Your Perfect Date is Waiting!</h1>
         <hr color="#94D1CA">
-        <h2>What best describes how you met?</h2>
+        <h2>What did he/she drink?</h2>
         <br/>
-        <form method="post" action="choice.php">
-          <input type="radio" name="met" value="bar" /> Bar <br/>
-          <input type="radio" name="met" value="gym" /> Gym <br/>
-          <input type="radio" name="met" value="res" /> Restaurant <br/>
-          <input type="radio" name="met" value="school" /> School <br/>
+        <form method="post" action="choice2.php">
+          <input type="radio" name="met" value="beer" /> Beer <br/>
+          <input type="radio" name="met" value="cos" /> Cosmopolitan <br/>
+          <input type="radio" name="met" value="gin" /> Gin and Tonic <br/>
+          <input type="radio" name="met" value="teq" /> Shot of Tequila <br/>
           <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
         </form>
       </div>

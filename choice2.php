@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,14 +62,14 @@
       <div class="hero-unit">
         <h1>Your Perfect Date is Waiting!</h1>
         <hr color="#94D1CA">
-        <h2>What best describes how you met?</h2>
+        <h2>You're at a dance party and your favorite song goes on. Do you...</h2>
         <br/>
-        <form method="post" action="choice.php">
-          <input type="radio" name="met" value="bar" /> Bar <br/>
-          <input type="radio" name="met" value="gym" /> Gym <br/>
-          <input type="radio" name="met" value="res" /> Restaurant <br/>
-          <input type="radio" name="met" value="school" /> School <br/>
-          <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
+        <form method="post" action="answer.php">
+          <input type="radio" name="met" value="1" /> Join in with all your best moves! <br/>
+          <input type="radio" name="met" value="2" /> Wait for someone to call you onto the dance floor <br/>
+          <input type="radio" name="met" value="3" /> Slowly back away, because you wouldn't dance in public for your life <br/>
+          <input type="radio" name="met" value="4" /> You tap your toes, and wish you had the guts to join in <br/>
+          <input id="submit" name="submit" type="submit" value="Finish &raquo;" class="btn primary large" background-color="white"/>
         </form>
       </div>
 
