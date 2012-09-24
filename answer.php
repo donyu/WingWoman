@@ -1,4 +1,22 @@
 <?php
+  // create a new cURL resource
+  $ch = curl_init();
+
+  // set URL and other appropriate options
+  curl_setopt($ch, CURLOPT_URL, "http://api.yipit.com/v1/deals/?key=Xyre6UJpsAe4VUwT&tag=Concert,%20Dance%20Classes");
+  curl_setopt($ch, CURLOPT_GET, true);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+  // grab URL and pass it to the browser
+  $result = curl_exec($ch);
+
+  var_dump($result);
+
+  $obj = json_decode($result);
+  $sentiment = $obj->{'response'}->{'deals'};
+
+  // close cURL resource, and free up system resources
+  curl_close($ch);
 
   $selected = $_POST['met'];
   $choice = 0;
@@ -10,23 +28,6 @@
     $choice = 3;
   elseif($selected == 4)
     $choice = 4;
-
-     // create a new cURL resource
-      $ch = curl_init();
-
-      // set URL and other appropriate options
-      curl_setopt($ch, CURLOPT_URL, "http://api.yipit.com/v1/deals/?key=Xyre6UJpsAe4VUwT&tag=Concert, Dance Classes, Fitness Classes, Skydiving");
-      curl_setopt($ch, CURLOPT_GET, true);
-	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-      // grab URL and pass it to the browser
-      $result = curl_exec($ch);
-
-      $obj = json_decode($result);
-      $sentiment = $obj->{'response'}->{'deals'};
-
-      // close cURL resource, and free up system resources
-      curl_close($ch);
 ?>
 
 <!DOCTYPE html>
@@ -89,47 +90,44 @@
       <div class="hero-unit">
         <h1>These date options are recommended for you and your lover!</h1>
         <hr color="#94D1CA">
-            <?php foreach($sentiment as &$e){ ?>
-              <p><?=$e?></p>
-            <?php } ?>
-            <?php if($choice == 1) { ?>
-            <img src="http://d.cdn.yipit.com/cache/deal/5-for-two-tickets-at-dangerfields-comedy-club-40-value-2-1339870194_small_image.jpg" />
-            <a href="http://yipit.com/aff/eval/deal/?deal=YP3jNAwm&key=dZHJt2xj">$5 for Two Tickets at Dangerfield's Comedy Club! ($40 Value)</a> 
-            <br/>
-            <br/>
-            <img src="http://b.cdn.yipit.com/cache/deal/two-30-minute-on-location-music-lessons-1339851658_small_image.jpg" />
-            <a href="http://yipit.com/san-francisco/living-social/two-30-minute-on-location-music-lessons/">Two 30-Minute On-Location Music Lessons</a> 
-            <?php } ?>
-            <?php if($choice == 2) { ?>
-            <img src="http://d.cdn.yipit.com/cache/deal/5-for-two-tickets-at-dangerfields-comedy-club-40-value-2-1339870194_small_image.jpg" />
-            <a href="http://yipit.com/aff/eval/deal/?deal=YP3jNAwm&key=dZHJt2xj">$5 for Two Tickets at Dangerfield's Comedy Club! ($40 Value)</a> 
-            <br/>
-            <br/>
-            <img src="http://b.cdn.yipit.com/cache/deal/two-30-minute-on-location-music-lessons-1339851658_small_image.jpg" />
-            <a href="http://yipit.com/san-francisco/living-social/two-30-minute-on-location-music-lessons/">Two 30-Minute On-Location Music Lessons</a> 
-            <?php } ?>
-            <?php if($choice == 3) { ?>
-            <img src="http://a.cdn.yipit.com/cache/deal/one-hour-massage-37-or-weekend-warrior-sports-massage-package-with-one-hour-massage-and-posture-analysis-and-report-75-1339851621_small_image.jpg" />
-            <a href="http://yipit.com/aff/eval/deal/?deal=JQf8nLSJ&key=dZHJt2xj">One-Hour Massage ($37) or Weekend Warrior Sports Massage Package with One-Hour Massage and Posture Analysis and Report ($75)</a> 
-            <br/>
-            <br/>
-            <img src="http://c.cdn.yipit.com/cache/deal/two-burgers-or-sandwiches-with-fries-or-house-salad-1339851617_small_image.jpg" />
-            <a href="http://yipit.com/vancouver/living-social/two-burgers-or-sandwiches-with-fries-or-house-salad/">Burgers or Sandwiches for Two</a> 
-            <?php } ?>
-            <?php if($choice == 4) { ?>
-            <img src="http://c.cdn.yipit.com/cache/deal/one-week-of-martial-arts-day-camp-with-a-field-trip-and-uniform-1339851617_small_image.jpg" />
-            <a href="http://yipit.com/oakland/living-social/one-week-of-martial-arts-day-camp-with-a-field-trip-and-uniform/">Alameda Brazilian Jiu-jitsu</a> 
-            <br/>
-            <br/>
-            <img src="http://c.cdn.yipit.com/cache/deal/one-month-of-unlimited-martial-arts-classes-for-kids-24-or-adults-49-1339851607_small_image.jpg" />
-            <a href="http://yipit.com/portland/living-social/one-month-of-unlimited-martial-arts-classes-for-kids-24-or-adults-49/">One Month of Unlimited Martial Arts Classes for Kids ($24) or Adults ($49)</a> 
-            <?php } ?>
+        <?php if($choice == 1) { ?>
+          <img src="http://d.cdn.yipit.com/cache/deal/5-for-two-tickets-at-dangerfields-comedy-club-40-value-2-1339870194_small_image.jpg" />
+          <a href="http://yipit.com/aff/eval/deal/?deal=YP3jNAwm&key=dZHJt2xj">$5 for Two Tickets at Dangerfield's Comedy Club! ($40 Value)</a> 
+          <br/>
+          <br/>
+          <img src="http://b.cdn.yipit.com/cache/deal/two-30-minute-on-location-music-lessons-1339851658_small_image.jpg" />
+          <a href="http://yipit.com/san-francisco/living-social/two-30-minute-on-location-music-lessons/">Two 30-Minute On-Location Music Lessons</a> 
+        <?php } ?>
+        <?php if($choice == 2) { ?>
+          <img src="http://d.cdn.yipit.com/cache/deal/5-for-two-tickets-at-dangerfields-comedy-club-40-value-2-1339870194_small_image.jpg" />
+          <a href="http://yipit.com/aff/eval/deal/?deal=YP3jNAwm&key=dZHJt2xj">$5 for Two Tickets at Dangerfield's Comedy Club! ($40 Value)</a> 
+          <br/>
+          <br/>
+          <img src="http://b.cdn.yipit.com/cache/deal/two-30-minute-on-location-music-lessons-1339851658_small_image.jpg" />
+          <a href="http://yipit.com/san-francisco/living-social/two-30-minute-on-location-music-lessons/">Two 30-Minute On-Location Music Lessons</a> 
+        <?php } ?>
+        <?php if($choice == 3) { ?>
+          <img src="http://a.cdn.yipit.com/cache/deal/one-hour-massage-37-or-weekend-warrior-sports-massage-package-with-one-hour-massage-and-posture-analysis-and-report-75-1339851621_small_image.jpg" />
+          <a href="http://yipit.com/aff/eval/deal/?deal=JQf8nLSJ&key=dZHJt2xj">One-Hour Massage ($37) or Weekend Warrior Sports Massage Package with One-Hour Massage and Posture Analysis and Report ($75)</a> 
+          <br/>
+          <br/>
+          <img src="http://c.cdn.yipit.com/cache/deal/two-burgers-or-sandwiches-with-fries-or-house-salad-1339851617_small_image.jpg" />
+          <a href="http://yipit.com/vancouver/living-social/two-burgers-or-sandwiches-with-fries-or-house-salad/">Burgers or Sandwiches for Two</a> 
+        <?php } ?>
+        <?php if($choice == 4) { ?>
+          <img src="http://c.cdn.yipit.com/cache/deal/one-week-of-martial-arts-day-camp-with-a-field-trip-and-uniform-1339851617_small_image.jpg" />
+          <a href="http://yipit.com/oakland/living-social/one-week-of-martial-arts-day-camp-with-a-field-trip-and-uniform/">Alameda Brazilian Jiu-jitsu</a> 
+          <br/>
+          <br/>
+          <img src="http://c.cdn.yipit.com/cache/deal/one-month-of-unlimited-martial-arts-classes-for-kids-24-or-adults-49-1339851607_small_image.jpg" />
+          <a href="http://yipit.com/portland/living-social/one-month-of-unlimited-martial-arts-classes-for-kids-24-or-adults-49/">One Month of Unlimited Martial Arts Classes for Kids ($24) or Adults ($49)</a> 
+        <?php } ?>
       </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>Developed by Don Yu, Sophie Chou, Anna Zhu, and Patrice Liang at the 2012 HackNJill Hackathon</p>
       </footer>
 
     </div> <!-- /container -->

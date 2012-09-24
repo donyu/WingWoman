@@ -76,7 +76,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>Developed by Don Yu, Sophie Chou, Anna Zhu, and Patrice Liang at the 2012 HackNJill Hackathon</p>
       </footer>
 
     </div> <!-- /container -->
