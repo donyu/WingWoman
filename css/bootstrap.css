@@ -4944,7 +4944,12 @@ input:focus, textarea:focus {
 #submit {
   margin-top:20px;
   text-align: center;
-  padding: 0px 0px;
+  padding: 0px 16px;
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 18px;
+  background-color: #AD1D28;
+  border-color: transparent;
 }
 #main {
   width: 70%;

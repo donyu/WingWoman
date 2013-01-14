@@ -11,7 +11,7 @@ Algorithm for choosing dates by Patrice & Sophie
 	what did he/she drink?
 	a) Beer	: Comedy Club, Bowling, Sports Tickets
 	b) Cosmopolitan : Museum, Dance Classes, Bar & Lounge
-	c) Gin and Tonic : Restauarant, Bar & Lounge, Museum
+	c) Gin and Tonic : Restaurant, Bar & Lounge, Museum
 	d) Shot of Tequila : Skydiving, Outdoor Adventures, Sports Tickets
 	
 		then:
