@@ -115,17 +115,30 @@
 
     <?php
 
+    include_once "libs/lib/swift_required.php";
+
+    error_reporting(E_ALL);
+
     function send_email() {
       $subject = "Someone is Interested in Wingwoman!";
-      $message = $_POST["message"];
-      $mail_from = $_POST["email"];
+      $text = $_POST["message"];
       $name = $_POST["name"];
+      $from = array($_POST["email"] => $name);
       $header = "from: $name <$mail_from>";
-      $to = "xiaodonyu@gmail.com";
-      $send_contact = mail($to, $subject, $message, $header);
-      $send_contact = true;
+      $to = array("xiaodonyu@gmail.com" => 'Don Yu');
+      
+      // using SwiftMailer to send mail using Mandrill SMTP
+      $transport = Swift_SmtpTransport::newInstance('smtp.mandrillapp.com', 587);
+      $transport->setUsername(getenv("MANDRILL_USERNAME"));
+      $transport->setPassword(getenv("MANDRILL_APIKEY"));
+      $swift = Swift_Mailer::newInstance($transport);
 
-      if ($send_contact) {
+      $message = new Swift_Message($subject);
+      $message->setFrom($from);
+      $message->setBody($text, 'text/plain');
+      $message->setTo($to);
+
+      if ($recipients = $swift->send($message, $failures)) {
         echo '<script>'
           , 'showModal("We have received your message and email. Thanks again for your interest and we will try to answer your questions or concerns soon!");'
           , '</script>';
