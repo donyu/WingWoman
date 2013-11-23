@@ -124,8 +124,7 @@
       $text = $_POST["message"];
       $name = $_POST["name"];
       $from = array($_POST["email"] => $name);
-      $header = "from: $name <$mail_from>";
-      $to = array("xiaodonyu@gmail.com" => 'Don Yu');
+      $to = array("sbchou@gmail.com" => 'Sophie Chou');
       
       // using SwiftMailer to send mail using Mandrill SMTP
       $transport = Swift_SmtpTransport::newInstance('smtp.mandrillapp.com', 587);
