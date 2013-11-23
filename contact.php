@@ -58,7 +58,7 @@
       <div class="hero-unit">
         <div class="span10">
             <h1>Questions or concerns?</h1>
-              <form action="../php/email.php" method="post">
+              <form action="contact.php" method="post">
                 <fieldset>
                   <label for="name">Name</label>
                   <input type="text" name="name" id="name" placeholder="Enter your name or organization" />
@@ -76,6 +76,16 @@
         <p>*Return messages may take up to a day to process.</p>
       </div>
 
+      <div id="confirmation-modal" class="modal hide fade" tabindex="-1" role="dialog">
+        <div class="modal-header">
+          <a href="#" class="close" data-dismiss="modal">&times;</a>
+          <h3>Thanks for Contacting Us!</h3>
+          </div>
+        <div class="modal-body">
+          <p id="confirmation-text"></p>
+        </div>
+      </div>
+
       <hr>
 
       <footer>
@@ -87,19 +97,50 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script>
+      function closeDialog () {
+        $('#confirmation-modal').modal('hide'); 
+      };
+
+      function showModal(modalText) {
+        $('#confirmation-text').text(modalText);
+        $('#confirmation-modal').modal('show');
+      }
+    </script>
+
+    <?php
+
+    function send_email() {
+      $subject = "Someone is Interested in Wingwoman!";
+      $message = $_POST["message"];
+      $mail_from = $_POST["email"];
+      $name = $_POST["name"];
+      $header = "from: $name <$mail_from>";
+      $to = "xiaodonyu@gmail.com";
+      $send_contact = mail($to, $subject, $message, $header);
+      $send_contact = true;
+
+      if ($send_contact) {
+        echo '<script>'
+          , 'showModal("We have received your message and email. Thanks again for your interest and we will try to answer your questions or concerns soon!");'
+          , '</script>';
+      } else {
+        echo '<script>'
+          , 'showModal("Something went wrong. Perhaps you were trying to hack us?");'
+          , '</script>';
+      }
+    }
+
+    if (isset($_POST['submit'])) {
+      send_email();
+    }
+
+    ?>
 
   </body>
 </html>
