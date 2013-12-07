@@ -40,12 +40,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html">WingWoman</a>
+          <a class="brand" href="index.php">WingWoman</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="date.html">Date</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li class="active"><a href="date.php">Date</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -80,19 +80,6 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>

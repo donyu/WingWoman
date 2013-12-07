@@ -53,12 +53,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html">WingWoman</a>
+          <a class="brand" href="index.php">WingWoman</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="date.html">Date</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li class="active"><a href="date.php">Date</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -75,10 +75,10 @@
               <h2>What did he/she drink?</h2>
         <br/>
         <form method="post" action="choice2.php">
-          <input type="radio" name="met" value="beer" /> Beer <br/>
-          <input type="radio" name="met" value="cos" /> Cosmopolitan <br/>
-          <input type="radio" name="met" value="gin" /> Gin and Tonic <br/>
-          <input type="radio" name="met" value="teq" /> Shot of Tequila <br/>
+          <input type="radio" name="bar" value="beer" /> Beer <br/>
+          <input type="radio" name="bar" value="cos" /> Cosmopolitan <br/>
+          <input type="radio" name="bar" value="gin" /> Gin and Tonic <br/>
+          <input type="radio" name="bar" value="teq" /> Shot of Tequila <br/>
           <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
         </form>
             <?php } ?>
@@ -86,10 +86,10 @@
               <h2>What was his/her workout plan?</h2>
         <br/>
         <form method="post" action="choice2.php">
-          <input type="radio" name="met" value="beer" /> Weight lifting <br/>
-          <input type="radio" name="met" value="cos" /> Treadmill <br/>
-          <input type="radio" name="met" value="gin" /> Pilates/Yoga <br/>
-          <input type="radio" name="met" value="teq" /> Sport Activity <br/>
+          <input type="radio" name="gym" value="1" /> Weight lifting <br/>
+          <input type="radio" name="gym" value="2" /> Treadmill <br/>
+          <input type="radio" name="gym" value="3" /> Pilates/Yoga <br/>
+          <input type="radio" name="gym" value="4" /> Sport Activity <br/>
           <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
         </form>
             <?php } ?>
@@ -97,10 +97,10 @@
               <h2>What does she/he usually eat for lunch?</h2>
         <br/>
         <form method="post" action="choice2.php">
-          <input type="radio" name="met" value="beer" /> Homemade sandwich <br/>
-          <input type="radio" name="met" value="cos" /> Sushi <br/>
-          <input type="radio" name="met" value="gin" /> Salad <br/>
-          <input type="radio" name="met" value="teq" /> Fast Food <br/>
+          <input type="radio" name="work" value="1" /> Homemade sandwich <br/>
+          <input type="radio" name="work" value="2" /> Sushi <br/>
+          <input type="radio" name="work" value="3" /> Salad <br/>
+          <input type="radio" name="work" value="4" /> Fast Food <br/>
           <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
         </form>
             <?php } ?>
@@ -108,10 +108,10 @@
               <h2>What kind of music was playing?</h2>
         <br/>
         <form method="post" action="choice2.php">
-          <input type="radio" name="met" value="beer" /> Indie <br/>
-          <input type="radio" name="met" value="cos" /> Classical <br/>
-          <input type="radio" name="met" value="gin" /> Rock and Roll <br/>
-          <input type="radio" name="met" value="teq" /> Pop <br/>
+          <input type="radio" name="concert" value="1" /> Indie <br/>
+          <input type="radio" name="concert" value="2" /> Classical <br/>
+          <input type="radio" name="concert" value="3" /> Rock and Roll <br/>
+          <input type="radio" name="concert" value="4" /> Pop <br/>
           <input id="submit" name="submit" type="submit" value="Next Question &raquo;" class="btn primary large" background-color="white"/>
         </form>
             <?php } ?>

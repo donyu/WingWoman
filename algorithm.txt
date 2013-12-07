@@ -9,7 +9,7 @@ Algorithm for choosing dates by Patrice & Sophie
 
 	if(at a bar):
 	what did he/she drink?
-	a) Beer	: Comedy Club, Bowling, Sports Tickets
+	a) Beer	: comedy-clubs, bowling, Sports Tickets
 	b) Cosmopolitan : Museum, Dance Classes, Bar & Lounge
 	c) Gin and Tonic : Restaurant, Bar & Lounge, Museum
 	d) Shot of Tequila : Skydiving, Outdoor Adventures, Sports Tickets
@@ -19,24 +19,24 @@ Algorithm for choosing dates by Patrice & Sophie
 		a) Join in with all your best moves! : Concert, Dance Classes, Fitness Classes, Skydiving
 		b) Wait for someone to call you onto the dance floor : Restuarant, Bar & Lounge, Wine Tasting
 		c) Slowly back away, because you wouldn't dance in public for your life : Bar & Lounge, Life Skills Classes, Tours, Museums
-		d) You tap your toes, and wish you had the guts to join in: Dance Classes, Comedy Clubs, Shows
+		d) You tap your toes, and wish you had the guts to join in: Dance Classes, comedy-clubs, Shows
 	
 	if(at the gym):
 	What was his/her workout plan?	
-	a) Weight lifting: Outdoor Adventures, Bowling, Sports Tickets
+	a) Weight lifting: Outdoor Adventures, bowling, Sports Tickets
 	b) Treadmill: Tours, Restaurant, Wine Tasting
 	c) Pilates/Yoga: Dance Classes, Concerts, Shows
-	d) Sport activity: Outdoor Adventures, Bowling, Sports Tickets, Comedy Clubs
+	d) Sport activity: Outdoor Adventures, bowling, Sports Tickets, comedy-clubs
 	
 		then: Dance party question
 		
 	if(at work):
 	
 	What does she/he usually eat for lunch?
-	a) Homemade sandwich: Life Skils Classes, Comedy Clubs
+	a) Homemade sandwich: Life Skils Classes, comedy-clubss
 	b) Sushi: Wine Tasting, Museums, Dance Classes
 	c) Salad: Museums, Shows, Wine Tasting
-	d) Fast food: Bowling, Comedy Clubs, Sports Tickets
+	d) Fast food: bowling, comedy-clubss, Sports Tickets
 	
 		then: Dance party question
 		
@@ -44,7 +44,7 @@ Algorithm for choosing dates by Patrice & Sophie
 	What kind of music was playing?
 	a) Indie: Museums, Concerts, Tours
 	b) Classical: Wine Tasting, Restaurant, Life Skills Classes
-	c) Rock & Roll: Outdoor Adventures, Sports Tickets, Comedy Clubs
+	c) Rock & Roll: Outdoor Adventures, Sports Tickets, comedy-clubss
 	d) Pop: Restaurant, Bar & Lounge, Dance Classes	
 	
 		then: Dance party question

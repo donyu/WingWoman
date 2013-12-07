@@ -44,12 +44,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html">WingWoman</a>
+          <a class="brand" href="index.php">WingWoman</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="date.html">Date</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li class="active"><a href="date.php">Date</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -65,10 +65,10 @@
         <h2>You're at a dance party and your favorite song goes on. Do you...</h2>
         <br/>
         <form method="post" action="answer.php">
-          <input type="radio" name="met" value="1" /> Join in with all your best moves! <br/>
-          <input type="radio" name="met" value="2" /> Wait for someone to call you onto the dance floor <br/>
-          <input type="radio" name="met" value="3" /> Slowly back away, because you wouldn't dance in public for your life <br/>
-          <input type="radio" name="met" value="4" /> You tap your toes, and wish you had the guts to join in <br/>
+          <input type="radio" name="dance" value="1" /> Join in with all your best moves! <br/>
+          <input type="radio" name="dance" value="2" /> Wait for someone to call you onto the dance floor <br/>
+          <input type="radio" name="dance" value="3" /> Slowly back away, because you wouldn't dance in public for your life <br/>
+          <input type="radio" name="dance" value="4" /> You tap your toes, and wish you had the guts to join in <br/>
           <input id="submit" name="submit" type="submit" value="Finish &raquo;" class="btn primary large" background-color="white"/>
         </form>
       </div>

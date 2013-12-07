@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>WingWoman</title>
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -24,7 +24,6 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
@@ -41,11 +40,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.html">WingWoman</a>
+          <a class="brand" href="index.php">WingWoman</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="date.html">Date</a></li>
+              <li class="active"><a href="index.php">Home</a></li>
+              <li><a href="date.php">Date</a></li>
               <li><a href="contact.php">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -58,12 +57,12 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Discover the Perfect Date!</h1>
-        <img src="Happy_Couple_Image.jpg" height="160" width="160" align="right">        
+        <img src="img/Happy_Couple_Image.jpg" height="160" width="160" align="right">        
         <hr color="#94D1CA">
         <p>Wingwoman is an application that works very much like 20 questions. Simply answer a short list of questions about you and your special someone and you can have your next date planned at the click of a button! Make the time you spend together even more special and perfectly personalized for each of your needs. Plus, all of our recommendations are local deals aggregated from sites like Groupon & Livingsocial so you get more romance for each dollar.</p>
         <br>
         <p>Winner of "Best Use of Yipit API" award at the 2012 Hack n' Jill Hackathon</p>
-        <p><a class="btn btn-primary btn-large" href="date.html">Get Started &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="date.php">Get Started &raquo;</a></p>
       </div>
 
       <hr>
@@ -77,19 +76,11 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
 
   </body>
 </html>

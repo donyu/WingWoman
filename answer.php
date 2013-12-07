@@ -3,7 +3,7 @@
   $ch = curl_init();
 
   // set URL and other appropriate options
-  curl_setopt($ch, CURLOPT_URL, "http://api.yipit.com/v1/deals/?key=Xyre6UJpsAe4VUwT&tag=Concert,%20Dance%20Classes");
+  curl_setopt($ch, CURLOPT_URL, "http://api.yipit.com/v1/deals/?key=Xyre6UJpsAe4VUwT&tag=comedy-clubs");
   curl_setopt($ch, CURLOPT_GET, true);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -18,7 +18,7 @@
   // close cURL resource, and free up system resources
   curl_close($ch);
 
-  $selected = $_POST['met'];
+  $selected = $_POST['dance'];
   $choice = 0;
   if($selected == 1)
     $choice = 1;

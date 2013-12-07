@@ -1,4 +1,5 @@
-# WingWoman - Find the perfect date option at the perfect price #
+# WingWoman #
+Find the perfect date option at the perfect price. 
 
 ## Technical Details ##
 This is a PHP web app deployed using heroku. We used Mandrill as a heroku add-on for sending emails on the contact us page (https://devcenter.heroku.com/articles/mandrill#provisioning-the-add-on). Particularly, we used SwiftMailer as seen here (http://help.mandrill.com/entries/21746308-Sending-via-SMTP-in-various-programming-languages). 
@@ -14,8 +15,6 @@ This is a PHP web app deployed using heroku. We used Mandrill as a heroku add-on
 
 1. I didn't know you could get environment variables w/ get_env() i.e. as seen in https://github.com/iphoting/heroku-buildpack-php-tyler/issues/4 
 2. Need to set up a Procfile and use foreman to run php web app against heroku locally (http://labs.enru.co.uk/phponheroku/#9)
-3. You c
 
 
-## Winner of Yipit API Prize ##
 Don, Patrice, Sophie, & Anna's Hack for Hack&Jill 6/16/12
