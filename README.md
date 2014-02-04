@@ -1,7 +1,8 @@
 # WingWoman #
-Find the perfect date option at the perfect price. 
+Hackathon project for Hack N' Jill Summer 2012. Find the perfect date option at the perfect price using the Yipit API (http://yipit.com/about/api/documentation/#deals_api). 
 
 ## Technical Details ##
+
 This is a PHP web app deployed using heroku. We used Mandrill as a heroku add-on for sending emails on the contact us page (https://devcenter.heroku.com/articles/mandrill#provisioning-the-add-on). Particularly, we used SwiftMailer as seen here (http://help.mandrill.com/entries/21746308-Sending-via-SMTP-in-various-programming-languages). 
 
 ## Environment Set Up ##
